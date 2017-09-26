@@ -1,0 +1,330 @@
+.topic_content{
+ 	background-color: #f4f4f4;
+}
+.topic_position{
+ 	width: 1190px;
+ 	margin:0 auto;
+ 	color: #999999;
+ 	height: 50px;
+ 	line-height: 50px;
+ 	font-size: 15px;
+}
+.topic_position i{
+ 	display: inline-block;
+ 	width: 14px;
+ 	height: 19px;
+ 	background: url('../images/color.png') no-repeat -44px -47px;
+ 	vertical-align: middle;
+}
+.topic_position a{
+ 	color: #999999;
+}
+.topic_position a:hover{
+ 	color: #10c55b;
+}
+.topic_position .active{
+	color: #10c55b;
+}
+ .topic_content .topic_top{
+ 	height: 148px;
+ 	width: 1190px;
+ 	margin: 0 auto;
+ 	background-color: #fff;
+ 	box-shadow: 1px 1px 1px 1px #ccc;
+}
+.topic_top{
+	position: relative;
+	overflow: hidden;
+}
+.topic_top .left,.topic_top .right{
+	position: absolute;
+	width: 440px;
+	height: 9px;
+	top:24px;
+	background: url('../images/dian.png') repeat-x;
+}
+.topic_top .left{
+	left: 20px;
+}
+.topic_top .right{
+	right: 20px;
+}
+.topic_top .title{
+	width: 270px;
+	margin:20px auto 0px;
+	text-align: center;
+	color: #7e7e7f;
+	font-weight: bold;
+	height: 50px;
+	font-size: 18px;
+}
+.topic_top p{
+	margin-left: 20px;
+	line-height: 34px;
+	height: 34px;
+	color: #888888;
+	font-size: 15px;
+}
+.topic_top p a{
+	color: #888888;
+}
+.topic_top p a:hover{
+	color: #00eb61;
+}
+.topic_bottom{
+	width: 1190px;
+	margin:16px auto;
+}
+.topic_list .topic_item{
+	width: 224px;
+	height: 310px;
+	margin-right:15px;
+	border:1px solid #ccc; 
+	margin-bottom: 12px;
+	position: relative;
+	overflow: hidden;
+	perspective: 1000px;
+	-webkit-perspective: 1000px;
+	-moz-perspective: 1000px;
+	-o-perspective: 1000px;
+	-ms-perspective: 1000px;
+}
+
+/*实现翻转*/
+.flip{
+	width: 224px;
+	height: 224px;
+}
+.flip {
+	transition: transform .5s ease-in-out;
+	-webkit-transition: transform .5s ease-in-out;
+	-moz-transition: transform .5s ease-in-out;
+	-ms-transition: transform .5s ease-in-out;
+	-o-transition: transform .5s ease-in-out;
+
+	-webkit-transform-style: preserve-3d; /*使其子类变换后得以保留 3d转换后的位置*/
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+
+	display:block;position: relative;
+	perspective: 1000px;
+	-webkit-perspective: 1000px; /*父类容器中 perspective 子类允许透视*/
+	-moz-perspective: 1000px;
+	-ms-perspective: 1000px;
+	-o-perspective: 1000px;
+	perspective: 1000px;
+}
+.front,.back{
+	backface-visibility: hidden;
+
+	transition: 0.6s ease-out;
+	-webkit-transition: .6s ease-out; 
+
+	-webkit-transform-style: preserve-3d; 
+	-moz-transform-style: preserve-3d; 
+	-ms-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.front{
+	z-index: 2;
+	transform: rotateY(0deg);
+	transform: rotateY(0deg); 
+	-webkit-transform: rotateY(0deg);
+	-moz-transform: rotateY(0deg);
+	-ms-transform: rotateY(0deg);
+	-o-transform: rotateY(0deg);}
+.back{ 
+	z-index:1;
+	transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+	-webkit-transform: rotateY(-180deg);
+	-moz-transform: rotateY(-180deg);
+	-ms-transform: rotateY(-180deg);
+	-o-transform: rotateY(-180deg);
+	background-color: #999;
+}
+
+.flip_outer:hover .back {
+	transform: rotateY(0deg); 
+	-webkit-transform: rotateY(0deg);
+	-moz-transform: rotateY(0deg);
+	-ms-transform: rotateY(0deg);
+	-o-transform: rotateY(0deg); 
+	z-index:2;
+}
+.flip_outer:hover .front { 
+	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg); 
+	z-index:1;
+}
+.back .shade_cen{
+	margin:60px auto;
+	width: 120px;
+}
+.back .link{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.back .shade_cen .str,.back .shade_cen .down{
+	width: 50px;
+	height: 30px;
+	color: #fff;
+	line-height: 30px;
+	text-align: center;
+	cursor: pointer;
+	background-color: #17e46b;
+	font-size: 14px;
+}
+/*列表底部*/
+.topic_list .topic_item p{
+	color: #888888;
+	width: 100%;
+	text-align: center;
+	font-size: 14px;
+	height: 44px;
+	line-height: 44px;
+}
+.topic_list .topic_item .storage_download{
+	border-top:1px solid #e1e1e1;
+	height: 38px;
+	width: 100%;
+	text-align: center;
+	color: #888888;
+	line-height: 38px;
+	font-size: 14px;
+}
+.topic_list .topic_item .storage{
+	display: inline-block;
+	width: 48%;
+	cursor: pointer;
+}
+.topic_list .topic_item .storage i{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-image: url('../images/icon_1.png');
+	background-position: 0px -336px;
+	vertical-align: middle;
+}
+.topic_list .topic_item .download{
+	display: inline-block;
+	width: 48%;
+	cursor: pointer;
+}
+.topic_list .topic_item .download i{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-image: url('../images/icon_1.png');
+	background-position: 0px -528px;
+	vertical-align: middle;
+}
+.topic_list .topic_item .past{
+	color: #ccc;
+	font-family: '宋体';
+}
+.topic_list .topic_item:nth-of-type(5n){
+	margin-right: 0;
+}
+
+.topic_item .original{
+	display: inline-block;
+	position: absolute;
+	top:4px;
+	right: 4px;
+	height: 50px;
+	width: 50px;
+	background: url('../images/misc.png');
+	background-position: -1px -1px;
+}
+.topic_item .original_1{
+	background-position: -61px -1px;
+}
+.topic_item .original_2{
+	background-position: -1px -61px;
+}
+.topic_item .original_3{
+	background-position: -61px -61px;
+}
+
+.product_page{
+	float: none;
+	width: 798px;
+	margin:0 auto;
+	padding: 20px 0;
+}
+.product_page_box li .current_page{
+	background:#f4f4f4;
+}
+
+/*.topic_item .shade{
+	position: absolute;
+	width: 224px;
+	height: 224px;
+	background: rgba(0,0,0,0.5);
+	top:0;
+	left:0;
+	z-index: 1;
+	display: none;
+}
+.topic_item .shade .link{
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color: #fff;
+}
+.topic_item .shade .shade_cen{
+	width: 140px;
+	position: absolute;
+	left:36px;
+	top:36px;
+	animation-fill-mode: forwards;
+}
+@keyframes play_shade{
+	0%{
+		left:0px;
+		top:0px;
+	}
+	100%{
+		left: 36px;
+		top:36px;
+	}
+}
+.topic_item .shade .str{
+	display: inline-block;
+	color: #fff;
+	height: 28px;
+	line-height: 28px;
+	width: 60px;
+	background-color:#17e36b;
+	text-align: center;
+	cursor: pointer;
+}
+.topic_item .shade .down{
+	display: inline-block;
+	color: #fff;
+	height: 28px;
+	line-height: 28px;
+	width: 60px;
+	background-color:#17e36b;
+	text-align: center;
+	cursor: pointer;
+}*/

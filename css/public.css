@@ -1,0 +1,146 @@
+/*登录对话框*/
+.wrap{
+	position: relative;/*也可以使用固定定位*/
+}
+.shade_input{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.4);
+	left: 0;
+	top:0;
+	display: none;
+}
+.shade_input .input_box{
+	width:400px;
+	height: 440px;
+	background: #fff;
+	border-radius: 4px;
+	position: fixed;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.input_box .close{
+	position: absolute;
+	top:-5px;
+	right: 8px;
+	color: #ccc;
+	font-size: 40px;
+	cursor: pointer;
+}
+.input_box h4{
+	margin-top: 20px;
+	color: #666666;
+	font-size: 20px;
+	text-align: center;
+	font-weight: normal;
+}
+.input_box ul{
+	width: 330px;
+	margin:0 auto;
+}
+.input_box ul li{
+	padding:58px 14px;
+}
+.input_box ul a{
+	display: inline-block;
+	width: 82px;
+	height: 100px;
+	text-align: center;
+	font-size: 14px;
+	color: #666666;
+}
+.input_box li a i{
+	display: inline-block;
+	width: 82px;
+	height: 82px;
+	background: url('../images/login.png') 0px 0px;
+	margin-bottom: 8px;
+}
+.input_box li a:hover i{
+	background: url('../images/login.png') 0px -84px;
+}
+.input_box li:nth-of-type(2) a i{
+	background: url('../images/login.png') -168px 0px;
+}
+.input_box li:nth-of-type(2) a:hover i{
+	background: url('../images/login.png') -168px -84px;
+}
+.input_box li:nth-of-type(3) a i{
+	background: url('../images/login.png') -84px 0px;
+}
+.input_box li:nth-of-type(3) a:hover i{
+	background: url('../images/login.png') -84px -84px;
+}
+
+.validate{
+	width: 240px;
+	margin:0 auto;
+}
+.validate a{
+	font-size: 16px;
+	color: #10c55b;
+}
+.validate a:hover{
+	text-decoration: underline;
+}
+.validate i{
+	font-style: normal;
+	font-size: 20px;
+	color: #10c55b;
+	margin:0 8px;
+}
+.shade_input .register{
+	display: block;
+	color: #999;
+	font-size: 18px;
+	width: 80px;
+	margin:30px auto;
+	cursor: pointer;
+}
+.shade_input .register:hover{
+	color: #10c55b;
+}
+
+/*面包屑*/
+.product_page{
+	margin-top: 60px;
+	margin-bottom: 30px;
+	float: right;
+}
+.product_page_box li{
+	height: 38px;
+	padding: 0 16px;
+	border: 1px solid #e3e3e3;
+	font-size: 14px;
+	color: #666666;
+	border-radius: 4px;
+	margin-right: 8px;
+	line-height: 38px;
+	text-align: center;
+	cursor: pointer;
+}
+.product_page_box li.active{
+	background-color: #10c55b;
+	color: #fff;
+}
+.product_page_box .page_btn:hover{
+	background-color: #10c55b;
+	color: #fff;
+}
+.product_page_box li.ellipsis{
+	border:none;
+	padding: 0;
+}
+.product_page_box li .current_page{
+	display: inline-block;
+	height: 38px;
+	border: 1px solid #e3e3e3;
+	border-radius: 4px;
+	margin:0 4px;
+	outline: none;
+	width: 38px;
+	text-align: center;
+	line-height: 38px;
+}
